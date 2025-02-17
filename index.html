@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Välj en bild</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Välj en bild</h2>
+
+    <!-- Bildval -->
+    <div class="gallery-container">
+        <img class="image-box" src="https://content.adoveodemo.com/1738665037279_DALL%C2%B7E%202025-01-02%2014.45.16%20-%20A%20detailed%20and%20realistic%20image%20of%20a%20hot%20dog%20in%20a%20bun%20with%20no%20background,%20perfect%20for%20a%20game%20asset,%20exported%20as%20a%20PNG%20with%20a%20transparent%20background.webp" alt="Bild 1" onclick="selectImage(this)">
+        <img class="image-box" src="https://content.adoveodemo.com/1739372076509_shelf.jpg" alt="Bild 2" onclick="selectImage(this)">
+        <img class="image-box" src="https://content.adoveodemo.com/1738665026378_DALL%C2%B7E%202025-01-02%2014.46.01%20-%20A%20detailed%20and%20realistic%20image%20of%20a%20chocolate%20bar%20with%20no%20background,%20perfect%20for%20a%20game%20asset,%20exported%20as%20a%20PNG%20with%20a%20transparent%20background.png" alt="Bild 3" onclick="selectImage(this)">
+        <img class="image-box" src="bild4.jpg" alt="Bild 4" onclick="selectImage(this)">
+    </div>
+
+    <!-- Input-gruppen där den valda bilden ska visas tillfälligt -->
+    <div class="input-group" id="registration_file_upload_div">
+      <img class="image_preview" src="https://content.adoveodemo.com/1739451183518_flyingkite.webp">
+      <div class="uploading_receipt_text" style="display: none;">
+          <div class="report-preloader">Loading</div>
+      </div>
+      <input type="file" name="registration_file_upload" class="cc-input" id="registration_file_upload" accept="image/png,image/jpeg" style="display: none;">
+      <a name="registration-file-upload-button" id="registration-file-upload-button" class="cc-input" style="text-decoration: none;">Välj bild <i class="fa fa-upload"></i></a>
+    </div>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Bakgrund och generell styling */
+body {
+  background-color: #2f4f66;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+/* Förhandsvisningscontainer */
+.preview-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Stor cirkulär bild */
+#image_preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  display: none; /* Göm tills en bild är vald */
+}
+
+/* Container */
+.gallery-container {
+  background-color: #34586d;
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.image-box {
+  width: 80px; 
+  aspect-ratio: 1 / 1; 
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #afafaf;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Visa bild istället för plus */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; 
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Markerad bild */
+.image-box.selected {
+  box-shadow: 1px 4px 16px #121211a3;
+  transform: scale(1.1);
+}
