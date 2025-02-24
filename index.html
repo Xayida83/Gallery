@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Välj en bild</title>
+    <title>Adoveo demo</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h2>Carousel - flip over</h2>
+    <div class="carousel-container">
+      <button class="prev buttons" onclick="prevImage()">❮</button>
 
-    <h2>Välj en bild</h2>
-
-    <!-- Bildval -->
-    <div class="gallery-container">
-        <img class="image-box" src="https://content.adoveodemo.com/1738665037279_DALL%C2%B7E%202025-01-02%2014.45.16%20-%20A%20detailed%20and%20realistic%20image%20of%20a%20hot%20dog%20in%20a%20bun%20with%20no%20background,%20perfect%20for%20a%20game%20asset,%20exported%20as%20a%20PNG%20with%20a%20transparent%20background.webp" alt="Bild 1" onclick="selectImage(this)">
-        <img class="image-box" src="https://content.adoveodemo.com/1739372076509_shelf.jpg" alt="Bild 2" onclick="selectImage(this)">
-        <img class="image-box" src="https://content.adoveodemo.com/1738665026378_DALL%C2%B7E%202025-01-02%2014.46.01%20-%20A%20detailed%20and%20realistic%20image%20of%20a%20chocolate%20bar%20with%20no%20background,%20perfect%20for%20a%20game%20asset,%20exported%20as%20a%20PNG%20with%20a%20transparent%20background.png" alt="Bild 3" onclick="selectImage(this)">
-        <img class="image-box" src="bild4.jpg" alt="Bild 4" onclick="selectImage(this)">
-    </div>
-
-    <!-- Input-gruppen där den valda bilden ska visas tillfälligt -->
-    <div class="input-group" id="registration_file_upload_div">
-      <img class="image_preview" src="https://content.adoveodemo.com/1739451183518_flyingkite.webp">
-      <div class="uploading_receipt_text" style="display: none;">
-          <div class="report-preloader">Loading</div>
+      <div class="flip-container" onclick="flipCard()">
+          <div class="flipper">
+              <div class="front">
+                  <img id="carousel-image" src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg" alt="Bild 1">
+              </div>
+              <div class="back">
+                  <img id="carousel-image-back" src="https://content.adoveodemo.com/1739372076509_shelf.jpg" alt="Backside">
+              </div>
+          </div>
       </div>
-      <input type="file" name="registration_file_upload" class="cc-input" id="registration_file_upload" accept="image/png,image/jpeg" style="display: none;">
-      <a name="registration-file-upload-button" id="registration-file-upload-button" class="cc-input" style="text-decoration: none;">Välj bild <i class="fa fa-upload"></i></a>
-    </div>
+        <button class="next buttons" onclick="nextImage()">❯</button>
+  </div>
   
 
-    <script src="script.js"></script>
+  <h2>Carousel</h2>
+
+  <div class="carousel">
+    <button class="prev-img arrows" onclick="changeImage()">❮</button>
+    <div class="carousel-container2">
+        <img class="image-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-DtouDhCB1L5sGjHHzHPyLfZsr7rHzUai9Q&amp;s" alt="Bild 1">
+        <img class="image-box" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Bild 2">
+        <img class="image-box" src="https://media.istockphoto.com/id/1443562748/sv/foto/cute-ginger-cat.jpg?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=zOjJf026iFzI0f01wPyUB7XpadumjhtjDpQrmf4kEEw=" alt="Bild 3">
+        <img class="image-box" src="https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Bild 4">
+    </div>
+    <button class="next-img arrows" onclick="changeImage()">❯</button>
+  </div>
+
+
+ 
 </body>
 </html>
